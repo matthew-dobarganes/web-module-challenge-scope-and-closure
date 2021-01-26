@@ -43,6 +43,8 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+  A: Closure is related to the scope of functions within Javascript, for example a function that's nested within another function has access to the primary function's parameters (or arguments passed into those parameters) and can access everything from the global scope all the way to the parent's function scope and its own scope. (Any other functions nested further in have the same perks but the outer most ones can't access the inner ones.)
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -64,9 +66,13 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
-b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
-c. What is the lexical scope of `newRoll`? 
+  A: Closure is used on the line that creates the child function after the return. I can tell because returns are the end of whatever function they are inside of, so the purpose of the "personalDice" function was completed and the only thing that's needed from it is the parameter for the arguments to be passed in to it.
 
+b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+  A: They both will do the same process, however due to Math.random the numerical values for ${newRoll} on both times dansRoll() is invoked could change.
+
+c. What is the lexical scope of `newRoll`? 
+  A: The lexical scope of newRoll is the inner most one (for this function[I also don't know if there are specific terms for this]). It has access to the arguments and values passed into and created in both functions that have been created.
 
 ### Task 3 - Stretch Goals
 
